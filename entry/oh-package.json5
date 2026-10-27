@@ -1,0 +1,11 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "SyncHM entry module",
+  "main": "",
+  "author": "",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "libsyncthingbridge.so": "file:./src/main/cpp/types/libsyncthingbridge"
+  }
+}

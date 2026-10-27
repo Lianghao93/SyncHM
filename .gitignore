@@ -1,0 +1,25 @@
+# hvigor / build output
+/build
+/entry/build
+/node_modules
+/oh_modules
+/entry/oh_modules
+/.hvigor
+/.idea
+/local.properties
+*.log
+
+# signing material — never commit
+*.p12
+*.cer
+*.p7b
+*.csr
+/keys
+
+# build artefacts / binaries — regenerate via scripts/build-golang.sh + scripts/build.sh
+/entry/libs/
+/dist/
+/build-vendor/
+
+# issue diagnostics
+issue/

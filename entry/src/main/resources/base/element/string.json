@@ -1,0 +1,96 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Syncthing client for HarmonyOS"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "SyncHM - 去中心化文件同步"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "SyncHM"
+    },
+    {
+      "name": "app_title",
+      "value": "SyncHM"
+    },
+    {
+      "name": "perm_documents_reason",
+      "value": "用于同步用户文档目录中的文件"
+    },
+    {
+      "name": "perm_download_reason",
+      "value": "用于同步下载目录中的文件"
+    },
+    {
+      "name": "tab_devices",
+      "value": "设备"
+    },
+    {
+      "name": "tab_folders",
+      "value": "文件夹"
+    },
+    {
+      "name": "tab_status",
+      "value": "状态"
+    },
+    {
+      "name": "tab_settings",
+      "value": "设置"
+    },
+    {
+      "name": "btn_start",
+      "value": "启动同步"
+    },
+    {
+      "name": "btn_stop",
+      "value": "停止同步"
+    },
+    {
+      "name": "btn_restart",
+      "value": "重启引擎"
+    },
+    {
+      "name": "msg_running",
+      "value": "同步引擎运行中"
+    },
+    {
+      "name": "msg_stopped",
+      "value": "同步引擎已停止"
+    },
+    {
+      "name": "msg_engine_loading",
+      "value": "正在加载原生引擎…"
+    },
+    {
+      "name": "msg_engine_load_failed",
+      "value": "原生引擎加载失败，见日志"
+    },
+    {
+      "name": "device_id_label",
+      "value": "本机设备 ID"
+    },
+    {
+      "name": "folder_add",
+      "value": "添加文件夹"
+    },
+    {
+      "name": "device_add",
+      "value": "添加设备"
+    },
+    {
+      "name": "perm_read_media_reason",
+      "value": "用于读取您选择同步的文件夹内容"
+    },
+    {
+      "name": "perm_write_media_reason",
+      "value": "用于将同步的文件写入目标文件夹"
+    },
+    {
+      "name": "perm_distributed_reason",
+      "value": "用于在局域网设备间发现并同步文件"
+    }
+  ]
+}

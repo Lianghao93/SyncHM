@@ -1,0 +1,11 @@
+{
+  "modelVersion": "6.0.0",
+  "name": "sync_hm",
+  "version": "1.0.0",
+  "description": "SyncHM - Syncthing client for HarmonyOS PC (MateBook Pro)",
+  "main": "",
+  "author": "",
+  "license": "MPL-2.0",
+  "dependencies": {},
+  "devDependencies": {}
+}
