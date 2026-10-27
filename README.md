@@ -39,7 +39,7 @@ Go 核心，交叉编译成 `libsyncthing.so`，通过鸿蒙 NAPI 桥接给 ArkT
 | **Go 核心（真实 syncthing 引擎）** | ✅ **已交叉编译**（openharmony/arm64，47MB） |
 | **HAP 打包** | ✅ **通过（真实引擎模式，含 libsyncthing.so）** |
 | **musl TLS 兼容** | ✅ **已解决**（两级间接 TLS：tls_g 普通变量 + inittls 探测） |
-| 真机运行 | ⚠️ 待真机验证（需华为开发者账号签名） |
+| 真机运行 | ✅ 已真机验证 |
 
 ## 目录
 
