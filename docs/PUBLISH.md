@@ -84,7 +84,7 @@ bash scripts/build-app.sh        # assembleApp + hap-sign-tool 签名 → dist/S
   - 密钥库 `synchm_release.p12`，别名 `synchm_release`，密码 `Synchm#2026Release`
   - 发布证书 `synchm_release.cer`（AGC 用户与访问 → 证书，有效期至 2029-10-28）
   - 发布 Profile `synchm_release_profileRelease.p7b`（绑定 com.synchm.client）
-- 版本要求：AppScope/app.json5 中 versionCode **严格递增**（当前 1.02/1000102），
+- 版本要求：AppScope/app.json5 中 versionCode **严格递增**（当前 1.03/1000103），
   同版本Code重传需先在软件包管理删除旧包。
 
 ### Step 4.5 受限 ACL 权限（包与 Profile 必须一致，否则检测不通过）
