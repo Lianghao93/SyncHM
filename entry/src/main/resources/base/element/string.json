@@ -13,6 +13,14 @@
       "value": "SyncHM"
     },
     {
+      "name": "KeepAlive_desc",
+      "value": "后台同步保活组件"
+    },
+    {
+      "name": "KeepAlive_label",
+      "value": "SyncHM 后台服务"
+    },
+    {
       "name": "app_title",
       "value": "SyncHM"
     },

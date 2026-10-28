@@ -64,6 +64,11 @@ export class SyncEngine {
     return this.loaded;
   }
 
+  /** 引擎是否在运行（本地缓存值，无 native 调用开销；窗口关闭拦截用）。 */
+  isRunning(): boolean {
+    return this.loaded && this.running;
+  }
+
   getLoadError(): string {
     return this.loadError;
   }

@@ -2,8 +2,8 @@
   "app": {
     "bundleName": "com.synchm.client",
     "vendor": "synchm",
-    "versionCode": 1000101,
-    "versionName": "1.01",
+    "versionCode": 1000103,
+    "versionName": "1.03",
     "icon": "$media:app_icon",
     "label": "$string:app_name"
   }

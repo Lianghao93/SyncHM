@@ -34,6 +34,6 @@ node "$DS_WIN/tools/hvigor/bin/hvigorw.js" \
 OUT="$BUILD/entry/build/default/outputs/default/entry-default-unsigned.hap"
 if [ -f "$OUT" ]; then
   mkdir -p "$SRC/dist"
-  cp "$OUT" "$SRC/dist/SyncHM-1.01-unsigned.hap"
-  echo "HAP -> $SRC/dist/SyncHM-1.01-unsigned.hap"
+  cp "$OUT" "$SRC/dist/SyncHM-1.03-unsigned.hap"
+  echo "HAP -> $SRC/dist/SyncHM-1.03-unsigned.hap"
 fi

@@ -50,8 +50,9 @@ golang/
 scripts/
 ├── build-golang.sh                     交叉编译 Go 核心（需 OpenHarmony Go fork）
 └── build.sh                            构建 HAP
-docs/                                   技术论证与安装手册
-dist/                                   HAP 产物
+scripts/build-app.sh                    构建上架用 Release APP 包（.app）
+docs/                                   技术论证与安装手册（PUBLISH.md=上架手册，STORE_LISTING.md=填报素材）
+dist/                                   HAP 与 APP 产物
 ```
 
 ## 构建

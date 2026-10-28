@@ -47,6 +47,10 @@ func goLog(format string, args ...interface{}) {
 	C.sync_hilog(cmsg)
 }
 
+// defaultSyncPath 是默认同步目录：文档目录下的专用子目录
+// （Documents 属鸿蒙 PC 预授权目录，应用有读写权限；沙箱外的 ~/Sync 会被 EPERM 拒绝）。
+const defaultSyncPath = "/storage/Users/currentUser/Documents/SyncHM"
+
 // traceOffset 记录 engine-trace.log 已泵送到 hilog 的字节位置。
 var traceOffset int64
 
@@ -243,6 +247,30 @@ func syncthing_start(config_json *C.char) *C.char {
 		}
 		if cfg.GUI.RawAddress == "" {
 			cfg.GUI.RawAddress = "127.0.0.1:8384"
+		}
+		// 「添加文件夹」对话框的默认路径 → 文档目录下的专用子目录。
+		// 注意：FolderConfiguration.Path 的出厂默认值是 "~"（GUI 会拼成 ~/<folderID>，
+		// 展开到不可写的 /storage/Users/currentUser），必须一并替换。
+		// 只有当前值还是空的或旧默认值时才覆盖，不干扰用户自定义值。
+		switch cfg.Defaults.Folder.Path {
+		case "", "~", "~/Sync", "/storage/Users/currentUser/Sync",
+			"/storage/Users/currentUser/Download",
+			"/storage/Users/currentUser/Documents":
+			cfg.Defaults.Folder.Path = defaultSyncPath
+		}
+		// 首次启动自动创建的「Default Folder」（id=default）一并迁到专用子目录。
+		// 同样只在它还是旧默认路径时迁移，用户已改过的不动。
+		for i := range cfg.Folders {
+			f := &cfg.Folders[i]
+			if f.ID != "default" {
+				continue
+			}
+			switch f.Path {
+			case "", "~", "~/Sync", "/storage/Users/currentUser/Sync",
+				"/storage/Users/currentUser/Download",
+				"/storage/Users/currentUser/Documents":
+				f.Path = defaultSyncPath
+			}
 		}
 	}); merr != nil {
 		goLog("GUI enable modify failed: %v", merr)
